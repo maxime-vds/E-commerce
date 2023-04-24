@@ -2,7 +2,7 @@ import MediaQuery from "react-responsive"
 
 export default function Navbar() {
    return (
-      <nav className='flex justify-between bg-yellow-50 text-white py-2'>
+      <nav className='flex justify-between bg-yellow-50 text-white py-2 px-2'>
          <div>
             <a href='#' className='text-black text-2xl font-bold'>
                E-meuble
@@ -36,7 +36,7 @@ export default function Navbar() {
 
          <MediaQuery maxWidth={1024}>
             <div>
-               <h2 className='text-black'>burgermenu</h2>
+               <h2 className='text-black pt-1'>burgermenu</h2>
             </div>
          </MediaQuery>
       </nav>
