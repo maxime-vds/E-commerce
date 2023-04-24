@@ -1,16 +1,13 @@
 import Fbutton from "./fbutton";
 
 
+const ButtonText : string[] = ['Chaises', 'Canapés', 'Tables', 'Lits', 'efjzoefj', 'djfezijf', 'booooooo']
+
 const FilterButtons = () => {
     return (  
             <div className="flex overflow-x-scroll">
-                <Fbutton ButtonText="Chaises"></Fbutton>
-                <Fbutton ButtonText="Canapés"></Fbutton>
-                <Fbutton ButtonText="Tables"></Fbutton>
-                <Fbutton ButtonText="Lits"></Fbutton>
-                <Fbutton ButtonText="afezfzef"></Fbutton>
-                <Fbutton ButtonText="bfefzfef"></Fbutton>
-                <Fbutton ButtonText="boooooooooo"></Fbutton>
+                {ButtonText && ButtonText.map(text => <Fbutton ButtonText={text}/>
+                )}
             </div>
         
     );
