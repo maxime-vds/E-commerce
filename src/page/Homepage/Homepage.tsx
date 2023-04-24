@@ -1,16 +1,17 @@
 
 //components
-import SearchBar from "./homepage-comps/searchbar/searchbar"
-import FilterButtons from "./homepage-comps/searchbar/filterbuttons"
+import SearchBar from "./homepage-comps/searchbar"
+import FilterButtons from "./homepage-comps/filterbuttons"
 
 function Homepage() {
    return (
-      <>
       <div className="">
          <SearchBar/>
-         </div>
          <FilterButtons/>
-      </>
+
+
+
+         </div>
    )
 }
 

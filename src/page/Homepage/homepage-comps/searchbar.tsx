@@ -1,5 +1,8 @@
 import searchIcon from '/search.svg'
 
+
+
+
 function SearchBar() {
     return (
         <div className="searchbar-wrapper flex justify-around border-[1px] border-solid py-2">
