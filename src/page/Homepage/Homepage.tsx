@@ -1,7 +1,15 @@
+
+//components
+import SearchBar from "./homepage-comps/searchbar/searchbar"
+import FilterButtons from "./homepage-comps/searchbar/filterbuttons"
+
 function Homepage() {
    return (
       <>
-         <h2>homepage</h2>
+      <div className="">
+         <SearchBar/>
+         </div>
+         <FilterButtons/>
       </>
    )
 }

@@ -1,8 +1,14 @@
+//icons
+import burgerMenu from "/burger.svg"
+
 import MediaQuery from "react-responsive"
+import { useState } from "react"
 
 export default function Navbar() {
+   const [BurgerMenu, setBurgerMenu] = useState<boolean>(false)
+
    return (
-      <nav className='flex justify-between bg-yellow-50 text-white py-2 px-2'>
+      <nav className='flex justify-between bg-yellow-200 text-white py-2 px-2'>
          <div>
             <a href='#' className='text-black text-2xl font-bold'>
                E-meuble
@@ -35,8 +41,19 @@ export default function Navbar() {
          </MediaQuery>
 
          <MediaQuery maxWidth={1024}>
-            <div>
-               <h2 className='text-black pt-1'>burgermenu</h2>
+            <div
+               className='p-1 hover:bg-slate-100 rounded-full'
+               onClick={() =>
+                  BurgerMenu ? setBurgerMenu(false) : setBurgerMenu(true)
+               }
+            >
+               {/* mieux d'utiliser un sidebar ? */}
+               <img src={burgerMenu} alt='burger-menu' />
+               {BurgerMenu && (
+                  <div className='relative'>
+                     <h2>Links</h2>
+                  </div>
+               )}
             </div>
          </MediaQuery>
       </nav>
