@@ -1,17 +1,21 @@
 //icons
-import burgerMenu from "/burger.svg"
+
 
 import MediaQuery from "react-responsive"
 import { useState } from "react"
 
 export default function Navbar() {
-   const [BurgerMenu, setBurgerMenu] = useState<boolean>(false)
+   const [burgerMenu, setBurgerMenu] = useState<boolean>(false)
+
+   const showNav =()=> {
+    setBurgerMenu(!burgerMenu);
+   }
 
    return (
-      <nav className='flex justify-between bg-yellow-200 text-white py-2 px-2'>
+      <nav className='flex justify-between bg-yellow-200 text-black py-5 px-5'>
          <div>
-            <a href='#' className='text-black text-2xl font-bold'>
-               E-meuble
+            <a href='#' className='text-black text-2xl font-bold pl-5'>
+               E-meuble 
             </a>
          </div>
 
@@ -27,35 +31,63 @@ export default function Navbar() {
                   Cart
                </a>
             </div>
-            <div className='text-black pr-20'>
-               <a href='' className='px-1'>
+            <div className='text-black pr-20 pt-2'>
+               <a href='' className='px-4'>
                   Panier
                </a>
-               <a href='' className='px-1'>
+               <a href='' className='px-4'>
                   coeur
                </a>
-               <a href='' className='px-1'>
+               <a href='' className='px-4'>
                   User
                </a>
             </div>
          </MediaQuery>
 
-         <MediaQuery maxWidth={1024}>
-            <div
-               className='p-1 hover:bg-slate-100 rounded-full'
-               onClick={() =>
-                  BurgerMenu ? setBurgerMenu(false) : setBurgerMenu(true)
-               }
+         
+            {/* hamburger */}
+            {burgerMenu ? (
+              // close button
+              <i
+                className="fixed right-[30px] fa fa-times text-2xl z-50 xl:hidden"
+                aria-hidden="true"
+                onClick={showNav}
+              ></i>
+            ) : (
+              <i
+                className="fa fa-bars text-3xl  xl:hidden"
+                aria-hidden="true"
+                onClick={showNav}
+              ></i>
+            )}
+    
+            {/* mobile nav */}
+            <nav
+              className={`h-[100vh] fixed top-[0px] flex flex-col items-center w-full pt-16 xl:hidden bg-white z-40 duration-700 ${
+                burgerMenu ? "right-[0px]" : "right-[-100vw]"
+              } `}
             >
-               {/* mieux d'utiliser un sidebar ? */}
-               <img src={burgerMenu} alt='burger-menu' />
-               {BurgerMenu && (
-                  <div className='relative'>
-                     <h2>Links</h2>
-                  </div>
-               )}
-            </div>
-         </MediaQuery>
+              
+              <a href="#" className="text-2xl p-6 text-black px-24 py-5 pb-7 hover:bg-gray-300 rounded-xl hover:underline ">
+                Home
+              </a>
+              <a href="#" className="text-2xl p-6 text-black px-24 py-5 pb-7 hover:bg-gray-300 rounded-xl">
+                Shop
+              </a>
+              <a href="#" className="text-2xl p-6 text-black px-24 py-5 pb-7 hover:bg-gray-300 rounded-xl">
+                Cart
+              </a>
+              <a href="#" className="text-2xl p-6 text-black px-24 py-5 pb-7 hover:bg-gray-300 rounded-xl">
+                Basket
+              </a>
+              <a href="#" className="text-2xl p-6 text-black px-24 py-5 pb-7 hover:bg-gray-300 rounded-xl">
+                Heart
+              </a>
+              <a href="#" className="text-2xl p-6 text-black px-24 py-5 pb-7 hover:bg-gray-300 rounded-xl">
+                User
+              </a>
+            </nav>
+        
       </nav>
    )
 }
