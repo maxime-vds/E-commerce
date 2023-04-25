@@ -1,14 +1,14 @@
 import Grid from "../comps/cardTest";
 import Delivery from "../comps/delivryInfo";
 import Footer from "../comps/footer";
-import Navbar from "../comps/navbar";
+
 import NewsLetters from "../comps/newsLetters";
 
 
-export default function LandingPage () {
-    return (
+
+export default function LandingPage() {
+   return (
       <>
-        <Navbar />
 {/* 
         <section>
           <div className="bg-yellow-100 p-5 flex items-center">
@@ -76,7 +76,7 @@ export default function LandingPage () {
 
         {/** comps footer  */}
         <Footer />
+  
       </>
-    );
-};
-
+   )
+}
