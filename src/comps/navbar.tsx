@@ -1,11 +1,14 @@
 //icons
 import burgerMenu from "/burger.svg"
 
+//components
+import SideBar from "./Sidebar/Sidebar"
+
 import MediaQuery from "react-responsive"
 import { useState } from "react"
 
 export default function Navbar() {
-   const [BurgerMenu, setBurgerMenu] = useState<boolean>(false)
+   const [SelectSidebar, setSelectSidebar] = useState<boolean>(true)
 
    return (
       <nav className='flex justify-between bg-yellow-200 text-white py-2 px-2'>
@@ -41,19 +44,18 @@ export default function Navbar() {
          </MediaQuery>
 
          <MediaQuery maxWidth={1024}>
+         {SelectSidebar && (
+                  <SideBar setSelectSidebar={setSelectSidebar}/>
+               )}
             <div
-               className='p-1 hover:bg-slate-100 rounded-full'
+               className='p-1 cursor-pointer'
                onClick={() =>
-                  BurgerMenu ? setBurgerMenu(false) : setBurgerMenu(true)
+                  SelectSidebar ? setSelectSidebar(false) : setSelectSidebar(true)
                }
-            >
+               >
                {/* mieux d'utiliser un sidebar ? */}
                <img src={burgerMenu} alt='burger-menu' />
-               {BurgerMenu && (
-                  <div className='relative'>
-                     <h2>Links</h2>
-                  </div>
-               )}
+              
             </div>
          </MediaQuery>
       </nav>

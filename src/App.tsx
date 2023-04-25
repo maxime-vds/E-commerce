@@ -5,7 +5,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Navbar from "./comps/navbar"
 import LandingPage from "./page/landingPage"
 import Homepage from "./page/Homepage/Homepage"
-import { SingleItem } from "./page/SingleItem/SingleItem"
 
 function App() {
    return (
