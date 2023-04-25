@@ -1,21 +1,22 @@
-
 import "./App.css"
-import Log from "./comps/testLogin";
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 
-import LandingPage from "./page/landingPage";
+//components
+import Navbar from "./comps/navbar"
+import LandingPage from "./page/landingPage"
+import Homepage from "./page/Homepage/Homepage"
+import { SingleItem } from "./page/SingleItem/SingleItem"
 
 function App() {
-
-
-
-
-  return (
-    <>
-      <LandingPage/>
-
-      {/* <Log /> */}
-    </>
-  );
+   return (
+      <BrowserRouter>
+      <Navbar/>
+         <Routes>
+            <Route path='/' element={<LandingPage />} />
+            <Route path='/home/*' element={<Homepage />} />
+         </Routes>
+      </BrowserRouter>
+   )
 }
 
 export default App
