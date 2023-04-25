@@ -1,24 +1,19 @@
-<<<<<<< HEAD
-import Navbar from "../comps/navbar"
 
 import AccountCircleIcon from "@mui/icons-material/AccountCircle"
 import LocalShippingIcon from "@mui/icons-material/LocalShipping"
 import CachedIcon from "@mui/icons-material/Cached"
 import SecurityIcon from "@mui/icons-material/Security"
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney"
-=======
 import Grid from "../comps/cardTest";
 import Delivery from "../comps/delivryInfo";
 import Footer from "../comps/footer";
 import Navbar from "../comps/navbar";
 import NewsLetters from "../comps/newsLetters";
 
->>>>>>> 17a5f71ae470aad87fecbe70eb3f504536a6ab5c
 
 export default function LandingPage() {
    return (
       <>
-<<<<<<< HEAD
          <section className=''>
             <div className='bg-yellow-100 p-5 flex items-center'>
                <div className='mr-4'>
@@ -80,7 +75,6 @@ export default function LandingPage() {
                </div>
             </div>
          </div>
-=======
         <Navbar />
 {/* 
         <section>
@@ -149,7 +143,6 @@ export default function LandingPage() {
 
         {/** comps footer  */}
         <Footer />
->>>>>>> 17a5f71ae470aad87fecbe70eb3f504536a6ab5c
       </>
    )
 }
