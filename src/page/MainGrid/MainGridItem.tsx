@@ -1,6 +1,12 @@
-const MainGridItem = ({image} : {image:string}) => {
+type MainGridItemProps = {
+  image: string
+  onClick: () =>  void
+}
+
+
+const MainGridItem = ({image, onClick} : MainGridItemProps) => {
     return (
-        <div className='GridItem relative'>
+        <div className='GridItem relative' onClick={onClick}>
           <div className='picture-wrapper h-[14rem] overflow-hidden'>
             <img src={image} className=""/>
           </div>
