@@ -21,17 +21,16 @@ function Homepage() {
 
    return (
       <div className="Homepage">
-
          {selectModal ? (<div className="Home">
          <SearchBar setQuery={setQuery}/>
          <FilterButtons setQuery={setQuery}/>
          <MainGrid data={data} setSelectModal={setSelectModal}/>
-         </div>) : 
+         </div>) : ( 
          <div className="Modal">
          <Routes>
             <Route path='/:id' element={<SingleItem setQuery={setQuery} data={data} setSelectModal={setSelectModal}/>}/>
          </Routes>
-         </div>}
+         </div>)}
          </div>
    )
 }

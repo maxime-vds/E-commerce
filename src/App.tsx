@@ -14,7 +14,6 @@ function App() {
          <Routes>
             <Route path='/' element={<LandingPage />} />
             <Route path='/home/*' element={<Homepage />} />
-            {/* <Route path='/item/:id' element={<SingleItem />} /> */}
          </Routes>
       </BrowserRouter>
    )
