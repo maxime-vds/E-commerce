@@ -8,6 +8,7 @@ import Navbar from "./comps/navbar"
 
 import LandingPage from "./page/landingPage"
 import Homepage from "./page/Homepage/Homepage"
+import GoogleLoginPage from "./comps/googleLogin"
 
 
 function App() {
@@ -17,6 +18,8 @@ function App() {
          <Routes>
             <Route path='/' element={<LandingPage />} />
             <Route path='/home' element={<Homepage />} />
+
+            <Route path='/test' element={<GoogleLoginPage />} />
          </Routes>
       </BrowserRouter>
    )

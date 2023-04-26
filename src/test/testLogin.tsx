@@ -4,9 +4,16 @@ import { googleLogout, useGoogleLogin } from '@react-oauth/google';
 import axios from 'axios';
 
 export default function Log () {
+    interface User {
+        access_token: string;
+        name: string;
+        email: string;
+        picture: string;
+      }
     
     const [user,setUser]=useState<User | null>(null);
-    const [profile, setProfile]=useState(null);
+    const [profile, setProfile] = useState<Record<string, any>>({});
+
 
     const login = useGoogleLogin({
         onSuccess: (codeResponse:any)=> setUser(codeResponse),
@@ -33,7 +40,7 @@ export default function Log () {
 
     const logOut= ()=> {
         googleLogout();
-        setProfile(null);
+        setProfile({});
     }
     
     
