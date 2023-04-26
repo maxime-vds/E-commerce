@@ -18,6 +18,7 @@ export default function GoogleLoginPage() {
             <button onClick={onClick}>
               <FcGoogle />
             </button>
+            
           )}
         /> */}
       </GoogleOAuthProvider>
