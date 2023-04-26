@@ -8,7 +8,7 @@ import MediaQuery from "react-responsive"
 import { useState } from "react"
 
 export default function Navbar() {
-   const [SelectSidebar, setSelectSidebar] = useState<boolean>(true)
+   const [selectSidebar, setSelectSidebar] = useState<boolean>(true)
 
    return (
       <nav className='flex justify-between bg-yellow-200 text-white py-2 px-2'>
@@ -44,13 +44,13 @@ export default function Navbar() {
          </MediaQuery>
 
          <MediaQuery maxWidth={1024}>
-         {SelectSidebar && (
-                  <SideBar setSelectSidebar={setSelectSidebar}/>
+         {selectSidebar && (
+                  <SideBar selectSidebar={selectSidebar} setSelectSidebar={setSelectSidebar}/>
                )}
             <div
                className='p-1 cursor-pointer'
                onClick={() =>
-                  SelectSidebar ? setSelectSidebar(false) : setSelectSidebar(true)
+                  selectSidebar ? setSelectSidebar(false) : setSelectSidebar(true)
                }
                >
                {/* mieux d'utiliser un sidebar ? */}
