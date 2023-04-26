@@ -11,9 +11,9 @@ import { Routes, Route} from "react-router-dom"
 
 
 function Homepage() {
-   const [query, setQuery] = useState<string>('')
    const [selectModal, setSelectModal] = useState<boolean>(true)
-   const {fetchData, data} = useFetch("http://localhost:3000/posts?" + query)
+   const {fetchData, filteredData, query, setQuery, setFilterType} = useFetch("http://localhost:3000/posts")
+
 
    useEffect(() => {
       fetchData()
@@ -22,13 +22,14 @@ function Homepage() {
    return (
       <div className="Homepage">
          {selectModal ? (<div className="Home">
-         <SearchBar setQuery={setQuery}/>
-         <FilterButtons setQuery={setQuery}/>
-         <MainGrid data={data} setSelectModal={setSelectModal}/>
+         <SearchBar setQuery={setQuery} setFilterType={setFilterType}/>
+         <FilterButtons setQuery={setQuery} setFilterType={setFilterType}/>
+         <MainGrid data={filteredData} setSelectModal={setSelectModal}/>
          </div>) : ( 
          <div className="Modal">
          <Routes>
-            <Route path='/:id' element={<SingleItem setQuery={setQuery} data={data} setSelectModal={setSelectModal}/>}/>
+            <Route path='/:id' element={<SingleItem setQuery={setQuery} 
+            data={filteredData} setSelectModal={setSelectModal}/>}/>
          </Routes>
          </div>)}
          </div>
