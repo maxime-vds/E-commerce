@@ -6,6 +6,8 @@ import { useState } from "react"
 
 export default function Navbar() {
    const [burgerMenu, setBurgerMenu] = useState<boolean>(false)
+    const [selectSidebar, setSelectSidebar] = useState<boolean>(true)
+
 
    const showNav =()=> {
     setBurgerMenu(!burgerMenu);
@@ -43,7 +45,6 @@ export default function Navbar() {
                </a>
             </div>
          </MediaQuery>
-
          
             {/* hamburger */}
             {burgerMenu ? (
@@ -67,6 +68,18 @@ export default function Navbar() {
                 burgerMenu ? "right-[0px]" : "right-[-100vw]"
               } `}
             >
+         <MediaQuery maxWidth={1024}>
+         {selectSidebar && (
+                  <SideBar selectSidebar={selectSidebar} setSelectSidebar={setSelectSidebar}/>
+               )}
+            <div
+               className='p-1 cursor-pointer'
+               onClick={() =>
+                  selectSidebar ? setSelectSidebar(false) : setSelectSidebar(true)
+               }
+               >
+               {/* mieux d'utiliser un sidebar ? */}
+               <img src={burgerMenu} alt='burger-menu' />
               
               <a href="#" className="text-2xl p-6 text-black px-24 py-5 pb-7 hover:bg-gray-300 rounded-xl hover:underline ">
                 Home
