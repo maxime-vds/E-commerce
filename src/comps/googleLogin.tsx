@@ -11,15 +11,15 @@ export default function GoogleLoginPage() {
   return (
     <div>
       <GoogleOAuthProvider clientId= {client} >
-        <GoogleLogin
+        {/* <GoogleLogin
           onSuccess={responseGoogle}
           onFailure={responseGoogle}
-          render={({ onClick }) => (
+          render={({ onClick }:any) => (
             <button onClick={onClick}>
               <FcGoogle />
             </button>
           )}
-        />
+        /> */}
       </GoogleOAuthProvider>
     </div>
   );

@@ -13,7 +13,7 @@ function App() {
       <Navbar/>
          <Routes>
             <Route path='/' element={<LandingPage />} />
-            <Route path='/home' element={<Homepage />} />
+            <Route path='/home/*' element={<Homepage />} />
 
             <Route path='/test' element={<GoogleLoginPage />} />
          </Routes>

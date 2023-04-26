@@ -20,8 +20,8 @@ export default function Navbar() {
                E-meuble 
             </a>
          </div>
-
          <MediaQuery minWidth={1024}>
+
             <div className='flex justify-center flex-1 space-x-10'>
                <a href='#' className='text-black px-4 py-2 hover:bg-gray-300'>
                   Home
@@ -44,9 +44,7 @@ export default function Navbar() {
                   User
                </a>
             </div>
-         </MediaQuery>
-         
-            {/* hamburger */}
+
             {burgerMenu ? (
               // close button
               <i
@@ -61,25 +59,26 @@ export default function Navbar() {
                 onClick={showNav}
               ></i>
             )}
-    
-            {/* mobile nav */}
-            <nav
+                     </MediaQuery>
+
+
+               <>
+            <MediaQuery maxWidth={1024}>
+            <div
               className={`h-[100vh] fixed top-[0px] flex flex-col items-center w-full pt-16 xl:hidden bg-white z-40 duration-700 ${
                 burgerMenu ? "right-[0px]" : "right-[-100vw]"
               } `}
             >
-         <MediaQuery maxWidth={1024}>
-         {selectSidebar && (
-                  <SideBar selectSidebar={selectSidebar} setSelectSidebar={setSelectSidebar}/>
+         {selectSidebar && (<div></div>
+                  // <SideBar selectSidebar={selectSidebar} setSelectSidebar={setSelectSidebar}/>
                )}
             <div
                className='p-1 cursor-pointer'
                onClick={() =>
                   selectSidebar ? setSelectSidebar(false) : setSelectSidebar(true)
                }
-               >
-               {/* mieux d'utiliser un sidebar ? */}
-               <img src={burgerMenu} alt='burger-menu' />
+               ></div>
+               {/* <img src={burgerMenu} alt='burger-menu' /> */}
               
               <a href="#" className="text-2xl p-6 text-black px-24 py-5 pb-7 hover:bg-gray-300 rounded-xl hover:underline ">
                 Home
@@ -99,8 +98,10 @@ export default function Navbar() {
               <a href="#" className="text-2xl p-6 text-black px-24 py-5 pb-7 hover:bg-gray-300 rounded-xl">
                 User
               </a>
-            </nav>
-        
-      </nav>
+               </div>
+
+               </MediaQuery>
+               </>
+               </nav>
    )
 }
