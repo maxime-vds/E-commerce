@@ -1,7 +1,7 @@
 import Fbutton from "./fbutton";
 
 
-const ButtonText : string[] = ['all', 'chaise', 'Canapés', 'Tables', 'Lits', 'efjzoefj', 'djfezijf', 'booooooo']
+const ButtonText : string[] = ['All', 'Chaise', 'Couch', 'Lit']
 //remplace buttonText avec un fetch qui va chercher les types buttonText = data.type
 
 
@@ -9,9 +9,8 @@ const ButtonText : string[] = ['all', 'chaise', 'Canapés', 'Tables', 'Lits', 'e
 const FilterButtons = ({setQuery} : {setQuery: React.Dispatch<React.SetStateAction<string>>}) => {
 
     const FilterValue = (text:string) => {
-        console.log(text);
         if(text) {
-            if(text==='all') {
+            if(text==='All') {
                 setQuery('')
             }
             else { 
