@@ -1,0 +1,102 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "caption": "brown desk chair",
+      "likes": 999,
+      "type": "Chaise",
+      "image": "/brown-desk-chair.jpeg"
+    },
+    {
+      "id": 2,
+      "caption": "brown outside chair",
+      "likes": 999,
+      "type": "Chaise",
+      "image": "/brown-outside-chair.jpeg"
+    },
+    {
+      "id": 3,
+      "caption": "bubble chair",
+      "likes": 9,
+      "type": "Chaise",
+      "image": "/bubble-chair.jpeg"
+    },
+    {
+      "id": 4,
+      "caption": "green chair",
+      "likes": 9,
+      "type": "Chaise",
+      "image": "/green-chair.jpeg"
+    },
+    {
+      "id": 5,
+      "caption": "comfy chair",
+      "likes": 9,
+      "type": "Chaise",
+      "image": "/comfy-chair.jpeg"
+    },
+    {
+      "id": 6,
+      "caption": "basic bed",
+      "likes": 999,
+      "type": "Lit",
+      "image": "/basic-bed.jpeg"
+    },
+    {
+      "id": 7,
+      "caption": "elegant wooden bed",
+      "likes": 999,
+      "type": "Lit",
+      "image": "/elegant-wooden-bed.jpeg"
+    },
+    {
+      "id": 8,
+      "caption": "fancy bed",
+      "likes": 999,
+      "type": "Lit",
+      "image": "/fancy-bed.jpeg"
+    },
+    {
+      "id": 9,
+      "caption": "yellow bed",
+      "likes": 999,
+      "type": "Lit",
+      "image": "/yellow-bed.jpeg"
+    },
+    {
+      "id": 10,
+      "caption": "chaise long couch",
+      "likes": 999,
+      "type": "Couch",
+      "image": "/chaise-long-couch.jpeg"
+    },
+    {
+      "id": 11,
+      "caption": "beige couch",
+      "likes": 999,
+      "type": "Couch",
+      "image": "/beige-couch.jpeg"
+    },
+    {
+      "id": 12,
+      "caption": "grey couch",
+      "likes": 999,
+      "type": "Couch",
+      "image": "/grey-couch.jpeg"
+    },
+    {
+      "id": 13,
+      "caption": "red couch",
+      "likes": 999,
+      "type": "Couch",
+      "image": "/red-couch.jpeg"
+    },
+    {
+      "id": 14,
+      "caption": "wooden couch",
+      "likes": 999,
+      "type": "Couch",
+      "image": "/wooden-couch.jpeg"
+    }
+  ]
+}
