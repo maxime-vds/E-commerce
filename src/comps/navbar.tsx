@@ -1,6 +1,6 @@
 //icons
-import MediaQuery from "react-responsive";
-import { useState } from "react";
+import MediaQuery from 'react-responsive';
+import { useState } from 'react';
 
 export default function Navbar() {
   const [burgerMenu, setBurgerMenu] = useState<boolean>(false);
@@ -16,7 +16,6 @@ export default function Navbar() {
           E-meuble
         </a>
       </div>
-
       <MediaQuery minWidth={1024}>
         <div className="flex justify-center flex-1 space-x-10">
           <a href="#" className="text-black px-4 py-2 hover:bg-gray-300">
@@ -25,10 +24,11 @@ export default function Navbar() {
           <a href="#" className="text-black px-4 py-2 hover:bg-gray-300">
             Shop
           </a>
-          <a href="#" className="text-black px-4 py-2 hover:bg-gray-300">
+          <a href="#" className=" px-4 py-2 text-black hover:bg-gray-300">
             Cart
           </a>
         </div>
+
         <div className="text-black pr-20 pt-2">
           <a href="" className="px-4">
             Panier
@@ -61,7 +61,7 @@ export default function Navbar() {
       {/* mobile nav */}
       <nav
         className={`h-[100vh] fixed top-[0px] flex flex-col items-center w-full pt-16 xl:hidden bg-white z-40 duration-700 ${
-          burgerMenu ? "right-[0px]" : "right-[-100vw]"
+          burgerMenu ? 'right-[0px]' : 'right-[-100vw]'
         } `}
       >
         <a
