@@ -11,7 +11,7 @@ import { Routes, Route } from "react-router-dom";
 
 function Homepage() {
   const [selectModal, setSelectModal] = useState<boolean>(true);
-  const { fetchData, filteredData, query, setQuery, setFilterType } = useFetch(
+  const { fetchData, data, filteredData, query, setQuery, setFilterType } = useFetch(
     "http://localhost:3000/posts"
   );
 
@@ -35,7 +35,7 @@ function Homepage() {
               element={
                 <SingleItem
                   setQuery={setQuery}
-                  data={filteredData}
+                  data={data}
                   setSelectModal={setSelectModal}
                 />
               }

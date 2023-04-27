@@ -19,7 +19,7 @@ export const SingleItem = ({ data, setSelectModal }: SingleItemProps) => {
         className="item-wrapper h-[20rem] mt-9"
         onClick={() => setSelectModal(true)}
       >
-        <img src={data[id - 1].image}></img>
+        <img src={data[id-1].image}></img>
       </div>
       <div className="item-description text-xs">
         <p>item descriptions</p>
