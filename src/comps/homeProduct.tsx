@@ -1,9 +1,5 @@
-  {/** The component for the products */}
+{
+  /** The component for the products */
+}
 
-  <section>
-  products : 
-  -favorites 
-  -recommended 
-  -Best seller 
-  -
-</section>
+<section>products : -favorites -recommended -Best seller -</section>;
