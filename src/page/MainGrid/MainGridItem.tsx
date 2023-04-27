@@ -14,6 +14,7 @@ const MainGridItem = ({image, onClick} : MainGridItemProps) => {
             <p>item descriptions</p>
             <p>item descriptions</p>
             <p>prix : 100 eurodollars</p>
+            <button className="bg-red-500"> Bouton</button>
           </div>
         <div className='absolute top-0 left-0 right-0 bottom-0 h-[14rem] bg-black opacity-0 hover:opacity-10 
         hover:transition-all duration-300 ease-in'></div>

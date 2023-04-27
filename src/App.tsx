@@ -6,6 +6,7 @@ import Navbar from "./comps/navbar"
 import LandingPage from "./page/landingPage"
 import Homepage from "./page/Homepage/Homepage"
 import GoogleLoginPage from "./comps/googleLogin"
+import ItemTest from "./comps/cartShop/itemcarttest"
 
 function App() {
    return (
@@ -15,7 +16,7 @@ function App() {
             <Route path='/' element={<LandingPage />} />
             <Route path='/home/*' element={<Homepage />} />
 
-            <Route path='/test' element={<GoogleLoginPage />} />
+            
          </Routes>
       </BrowserRouter>
    )

@@ -20,10 +20,13 @@ onClick={() => setSelectModal(true)}>
 </div>
 <div className='item-description text-xs'>
             <p>item descriptions</p>
+            <p>{data [id].caption}</p>
             <p>item descriptions</p>
             <p>prix : 100 eurodollars</p>
-          </div>
+            <button className="bg-red-500"> Bouton</button>
+             </div>
 
-          <button>Buy</button>
+            
+             
 </div>
  )} 

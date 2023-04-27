@@ -32,6 +32,7 @@ function Homepage() {
             data={filteredData} setSelectModal={setSelectModal}/>}/>
          </Routes>
          </div>)}
+         
          </div>
    )
 }
