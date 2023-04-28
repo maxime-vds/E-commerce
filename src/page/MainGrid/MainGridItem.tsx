@@ -1,24 +1,25 @@
 import Button from "../panier/Button";
-import CartPage from "../panier/Cart";
+import CartPage from "../panier/CartPage";
 import { useState } from "react";
 
 
 type MainGridItemProps = {
   image: string
+  id: number
   onClick: () =>  void
 }
 
 
-const MainGridItem = ({image, onClick} : MainGridItemProps) => {
+const MainGridItem = ({image, id, onClick} : MainGridItemProps) => {
 
 
-  const [cartItems, setCartItems] = useState<string[]>([]);
+  const [cartItems, setCartItems] = useState<any[]>([]);
 
-  const handleAddToCart = () => {
+  const handleAddToCart = (id:number) => {
     // Ajouter l'article au panier ici
-    setCartItems([...cartItems, "Article ajouté au panier"]);
+    setCartItems((prevCartItems) => [...prevCartItems, id]);
 
-    console.log(Button)
+    console.log(cartItems)
   };
     return (
         <div className='GridItem relative' onClick={onClick}>
@@ -30,12 +31,10 @@ const MainGridItem = ({image, onClick} : MainGridItemProps) => {
             <p>item descriptions</p>
             <p>prix : 100 eurodollars</p>
             <button className="bg-red-500"> Bouton</button>
-            <Button onClick={handleAddToCart}>Ajouter au panier</Button>
-            {/* <CartPage cartItems={cartItems} /> 
+            <Button onClick={()=> handleAddToCart (id)}>Ajouter au panier</Button>
+           {/* <CartPage cartItems={cartItems} />  */}
             
-            souci du site bug et plante car souci niveau du doom ? 
             
-            */}
     
           </div>
         <div className='absolute top-0 left-0 right-0 bottom-0 h-[14rem] bg-black opacity-0 hover:opacity-10 

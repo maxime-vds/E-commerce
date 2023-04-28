@@ -1,17 +1,23 @@
-import { FC } from "react";
-import Cart from "./Cart";
+import  { FC } from "react";
 
-interface CartPageProps {
+interface CartProps {
   cartItems: string[];
 }
-
-const CartPage: FC<CartPageProps> = ({ cartItems }) => {
-  return (
-    <div>
-      <h2>Page de panier</h2>
-      <Cart cartItems={cartItems} />
-    </div>
-  );
-};
-
-export default CartPage;
+const Cart: FC<CartProps> = ({ cartItems }) => {
+    return (
+      <div className="cart">
+        <h2>Panier</h2>
+        {cartItems.length === 0 && <p>Votre panier est vide.</p>}
+        {cartItems.length > 0 && (
+          <ul>
+            {cartItems.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        )}
+      </div>
+    );
+  };
+  
+  export default Cart;
+  //le panier

@@ -7,7 +7,7 @@ import LandingPage from "./page/landingPage"
 import Homepage from "./page/Homepage/Homepage"
 // import GoogleLoginPage from "./comps/googleLogin"
 // import ItemTest from "./comps/cartShop/itemcarttest"
-// import CartPage from "./page/panier/Cart"
+import CartPage from "./page/panier/CartPage"
 
 function App() {
    return (
@@ -17,11 +17,11 @@ function App() {
             <Route path='/' element={<LandingPage />} />
             <Route path='/home/*' element={<Homepage />} />
 
-            {/* <Route path='/cart' element={<CartPage />} /> 
-            fait planter l'appli en ce moment a fixer pour voir si ca marche. 
+             <Route path='/cart' element={<CartPage />} /> 
+            {/* fait planter l'appli en ce moment a fixer pour voir si ca marche.  */}
             
             
-            */}
+            
 
             
          </Routes>
