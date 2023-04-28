@@ -17,7 +17,7 @@ function App() {
             <Route path='/' element={<LandingPage />} />
             <Route path='/home/*' element={<Homepage />} />
 
-             <Route path='/cart' element={<CartPage />} /> 
+             <Route path='/cart' element={<CartPage  />} /> 
             {/* fait planter l'appli en ce moment a fixer pour voir si ca marche.  */}
             
             
