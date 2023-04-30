@@ -1,13 +1,9 @@
 type MainGridItemProps = {
   image: string
-  id: number
   onClick: () => void
-  AddToUserCart: (id:number) => void
-
 }
 
-const MainGridItem = ({ image, id, onClick, AddToUserCart }: MainGridItemProps) => {
-
+const MainGridItem = ({ image, onClick }: MainGridItemProps) => {
   return (
     <div className="item-wrapper">
       <div className="GridItem relative" onClick={onClick}>
@@ -24,7 +20,6 @@ const MainGridItem = ({ image, id, onClick, AddToUserCart }: MainGridItemProps) 
         hover:transition-all duration-300 ease-in"
         ></div>
       </div>
-      <button onClick={() => AddToUserCart(id)}>buy this item</button>
     </div>
   )
 }

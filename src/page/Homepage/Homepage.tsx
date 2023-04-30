@@ -13,17 +13,13 @@ import { Routes, Route } from 'react-router-dom'
 
 function Homepage() {
   const [selectModal, setSelectModal] = useState<boolean>(true)
-  const { userCart, AddToUserCart } = useAddToCart()
+  const { AddToUserCart } = useAddToCart()
   const { fetchData, data, filteredData, query, setQuery, setFilterType } =
     useFetch('http://localhost:3000/posts')
 
   useEffect(() => {
     fetchData()
   }, [query])
-
-
-  
-  console.log(userCart)
 
   return (
     <div className="Homepage">

@@ -3,7 +3,6 @@ import MainGridItem from './MainGridItem'
 
 //hooks
 import { useNavigate } from 'react-router-dom'
-import useAddToCart from '../../hooks/useAddToCart'
 
 type MainGridProps = {
   data: [{}]
@@ -11,9 +10,6 @@ type MainGridProps = {
 }
 
 const MainGrid = ({ data, setSelectModal }: MainGridProps) => {
-  const { AddToUserCart } = useAddToCart()
-
-
   const navigate = useNavigate()
 
   const ClickItem = (id: number) => {
@@ -26,9 +22,7 @@ const MainGrid = ({ data, setSelectModal }: MainGridProps) => {
         data.map((item: any) => (
           <MainGridItem
             key={item.id}
-            id={item.id}
             image={item.image}
-            AddToUserCart={AddToUserCart}
             onClick={() => ClickItem(item.id)}
           />
         ))}
