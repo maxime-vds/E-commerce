@@ -1,25 +1,30 @@
-import { useParams } from "react-router-dom";
+import { useParams } from 'react-router-dom'
 
 type SingleItemProps = {
   data: [
     {
-      id: number;
-      image: string;
+      id: number
+      image: string
     }
-  ];
-  setQuery: React.Dispatch<React.SetStateAction<string>>;
-  setSelectModal: React.Dispatch<React.SetStateAction<boolean>>;
-};
+  ]
+  setQuery: React.Dispatch<React.SetStateAction<string>>
+  setSelectModal: React.Dispatch<React.SetStateAction<boolean>>
+  AddToUserCart: (id: string) => void
+}
 
-export const SingleItem = ({ data, setSelectModal }: SingleItemProps) => {
-  const { id = 0 }: any = useParams();
+export const SingleItem = ({
+  data,
+  setSelectModal,
+  AddToUserCart,
+}: SingleItemProps) => {
+  const { id = 0 }: any = useParams()
   return (
     <div className="SingleItem bg-slate-300">
       <div
         className="item-wrapper h-[20rem] mt-9"
         onClick={() => setSelectModal(true)}
       >
-        <img src={data[id-1].image}></img>
+        <img src={data[id - 1].image}></img>
       </div>
       <div className="item-description text-xs">
         <p>item descriptions</p>
@@ -27,7 +32,7 @@ export const SingleItem = ({ data, setSelectModal }: SingleItemProps) => {
         <p>prix : 100 eurodollars</p>
       </div>
 
-      <button>Buy</button>
+      <button onClick={() => AddToUserCart(id)}>Buy</button>
     </div>
-  );
-};
+  )
+}

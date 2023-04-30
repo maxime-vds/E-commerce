@@ -1,23 +1,29 @@
 //components
-import SearchBar from "./homepage-comps/searchbar";
-import FilterButtons from "./homepage-comps/filterbuttons";
-import MainGrid from "../MainGrid/MainGrid";
-import { SingleItem } from "../SingleItem/SingleItem";
+import SearchBar from './homepage-comps/searchbar'
+import FilterButtons from './homepage-comps/filterbuttons'
+import MainGrid from '../MainGrid/MainGrid'
+import { SingleItem } from '../SingleItem/SingleItem'
 
 //hooks
-import { useEffect, useState } from "react";
-import { useFetch } from "../../hooks/useFetch";
-import { Routes, Route } from "react-router-dom";
+import { useEffect, useState } from 'react'
+import { useFetch } from '../../hooks/useFetch'
+import useAddToCart from '../../hooks/useAddToCart'
+
+import { Routes, Route } from 'react-router-dom'
 
 function Homepage() {
-  const [selectModal, setSelectModal] = useState<boolean>(true);
-  const { fetchData, data, filteredData, query, setQuery, setFilterType } = useFetch(
-    "http://localhost:3000/posts"
-  );
+  const [selectModal, setSelectModal] = useState<boolean>(true)
+  const { userCart, AddToUserCart } = useAddToCart()
+  const { fetchData, data, filteredData, query, setQuery, setFilterType } =
+    useFetch('http://localhost:3000/posts')
 
   useEffect(() => {
-    fetchData();
-  }, [query]);
+    fetchData()
+  }, [query])
+
+
+  
+  console.log(userCart)
 
   return (
     <div className="Homepage">
@@ -37,6 +43,7 @@ function Homepage() {
                   setQuery={setQuery}
                   data={data}
                   setSelectModal={setSelectModal}
+                  AddToUserCart={AddToUserCart}
                 />
               }
             />
@@ -44,7 +51,7 @@ function Homepage() {
         </div>
       )}
     </div>
-  );
+  )
 }
 
-export default Homepage;
+export default Homepage
