@@ -1,8 +1,8 @@
 //components
 import SearchBar from './homepage-comps/searchbar'
 import FilterButtons from './homepage-comps/filterbuttons'
-import MainGrid from '../MainGrid/MainGrid'
-import { SingleItem } from '../SingleItem/SingleItem'
+import MainGrid from '../MainGrid/maingrid'
+import { SingleItem } from '../SingleItem/single-item'
 
 //hooks
 import { useEffect, useState } from 'react'
@@ -14,8 +14,7 @@ import { Routes, Route } from 'react-router-dom'
 function Homepage() {
   const [selectModal, setSelectModal] = useState<boolean>(true)
   const { AddToUserCart } = useAddToCart()
-  const { fetchData, data, filteredData, query, setQuery, setFilterType } =
-    useFetch('http://localhost:3000/posts')
+  const { fetchData, data, filteredData, query, setQuery, setFilterType } = useFetch('http://localhost:3000/posts')
 
   useEffect(() => {
     fetchData()
@@ -35,12 +34,7 @@ function Homepage() {
             <Route
               path="/:id"
               element={
-                <SingleItem
-                  setQuery={setQuery}
-                  data={data}
-                  setSelectModal={setSelectModal}
-                  AddToUserCart={AddToUserCart}
-                />
+                <SingleItem setQuery={setQuery} data={data} setSelectModal={setSelectModal} AddToUserCart={AddToUserCart} />
               }
             />
           </Routes>

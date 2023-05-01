@@ -1,46 +1,42 @@
 import { useState, useEffect } from 'react'
 
+type cartProps = {
+  id: number
+  amount: number
+  image: string
+}
+
 export default function useAddToCart() {
-  const [userCartIDs, setAddToUserCartIDs] = useState<any[]>([])
-  const [body, setBody] = useState<{ id: string; amount: number } | {} | undefined>({})
+  const [cartItems, setCartItems] = useState<cartProps[]>([])
+  // const [totalAmount, setTotalAmount] = useState<number>(0)
+  // const [AllIDs, setAllIDs] = useState<number[]>([])
 
-  const AddToUserCart = (id: string) => {
-    setAddToUserCartIDs((prevCart) => [...prevCart, id])
-  }
-  useEffect(() => {
-    if (userCartIDs.length > 0) {
-      console.log(userCartIDs)
-
-      //userCart should grab the IDs and the amounts
-      // and then we can add up the amounts and Numberify the IDs here
+  const AddToUserCart = (id: number, amount: number, image: string) => {
+    const localCart = localStorage.getItem('cart')
+    if (localCart) {
+      const cartItems = JSON.parse(localCart)
+      setCartItems(cartItems)
     }
-  }, [AddToUserCart])
 
-  // useEffect(() => {
-  //   if (body) {
-  //     console.log('undefined is falsy ? and empty object too? ')
+    //if ID exists, add multiplier
 
-  //     const setBodyUserCart = ({
-  //       id,
-  //       amount,
-  //     }: {
-  //       id: string
-  //       amount: number
-  //     }) => {
-  //       //logic for changing ids to numbers (if needed)
-  //       // logic for adding up amount
+    setCartItems((prevItem) => [...prevItem, { id, amount, image }])
+  }
 
-  //       return setBody({ id, amount })
-  //     }
-  //     setBodyUserCart(body)
-  //   }
-  // }, [body])
+  useEffect(() => {
+    if (cartItems.length > 0) {
+      // should do the server-side cart here too
+      // make UserCart accessible client-side
+      localStorage.setItem('cart', JSON.stringify(cartItems))
+    }
+  }, [cartItems])
 
   const BuyUserCart = (body: { id: string; amount: number }) => {
-    console.log(body)
-
-    // grab body for fetch request
+    // grab&prepare body for fetch request
+    // const body = {
+    // id : cartItems.reduce((acc, item) => acc + item.amount, 0)),
+    // amount: (cartItems.map((item) => item.id))}
   }
 
-  return { userCart: userCartIDs, AddToUserCart, BuyUserCart }
+  return { AddToUserCart, BuyUserCart }
 }
