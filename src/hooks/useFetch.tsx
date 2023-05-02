@@ -1,14 +1,13 @@
+// hooks
 import { useState, useEffect } from 'react'
 
-type filterItemProps = {
-  id: number
-  caption: string
-  type: string
-}
+// types
+import { dataProps } from '../types/dataprops'
 
 export const useFetch = (url: string) => {
-  const [data, setData] = useState<any>()
-  const [filteredData, setFilteredData] = useState<any>([])
+  // get rid of these any's
+  const [data, setData] = useState<dataProps[]>()
+  const [filteredData, setFilteredData] = useState<dataProps[] | null>([])
   const [query, setQuery] = useState<string>('')
   const [IDquery, setIDquery] = useState<string[]>([])
   const [filterType, setFilterType] = useState<string>('')
@@ -27,13 +26,13 @@ export const useFetch = (url: string) => {
   useEffect(() => {
     if (data) {
       if (filterType === 'searchbar') {
-        const filteredDataOnCaption = data.filter((item: filterItemProps) =>
+        const filteredDataOnCaption = data.filter((item: dataProps) =>
           item.caption.toLowerCase().includes(query.toLowerCase())
         )
         setFilteredData(filteredDataOnCaption)
       }
       if (filterType === 'filterbuttons') {
-        const filteredDataOnCategory = data.filter((item: filterItemProps) =>
+        const filteredDataOnCategory = data.filter((item: dataProps) =>
           item.type.toLowerCase().includes(query.toLowerCase())
         )
         setFilteredData(filteredDataOnCategory)
@@ -44,7 +43,7 @@ export const useFetch = (url: string) => {
           const cartItems = JSON.parse(getCart)
           const cartIDs = cartItems.map((item: { id: string }) => item.id)
           setIDquery(cartIDs)
-          const filteredDataOnCart = data.filter((item: filterItemProps) => IDquery.includes(item.id.toString()))
+          const filteredDataOnCart = data.filter((item: dataProps) => IDquery.includes(item.id.toString()))
           setFilteredData(filteredDataOnCart)
         } else {
           setFilteredData(null)
