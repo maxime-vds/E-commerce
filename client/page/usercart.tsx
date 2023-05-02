@@ -4,10 +4,11 @@ import { useEffect } from 'react'
 
 //types
 import { dataProps } from '../types/dataprops'
-import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const UserCart = () => {
   const { fetchData, filteredData: data, setFilterType } = useFetch('http://localhost:3000/posts')
+  const navigate = useNavigate()
 
   useEffect(() => {
     setFilterType('usercart')
@@ -26,7 +27,7 @@ const UserCart = () => {
           </div>
         ))}
 
-        <button onClick={() => }>Checkout</button>
+      <button onClick={() => navigate('/checkout')}>CheckOut</button>
     </div>
   )
 }

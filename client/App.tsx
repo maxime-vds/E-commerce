@@ -7,6 +7,7 @@ import LandingPage from './page/landingPage'
 import UserCart from './page/usercart'
 import Homepage from './page/Homepage/homepage'
 import GoogleLoginPage from './comps/googleLogin'
+import StripeContainer from './comps/stripe/stripe-container'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/home/*" element={<Homepage />} />
         <Route path="/cart" element={<UserCart />} />
+        <Route path="/checkout" element={<StripeContainer />} />
         <Route path="/test" element={<GoogleLoginPage />} />
       </Routes>
     </BrowserRouter>

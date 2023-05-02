@@ -1,7 +1,6 @@
 import { useStripe, useElements, CardElement } from '@stripe/react-stripe-js'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import axios from 'axios'
-import React from "react";
 
 // const CARD_OPTIONS = {
 //   iconStyle: 'solid',
@@ -29,43 +28,53 @@ export default function PaymentForm() {
 
   const stripe = useStripe()
   const elements = useElements()
-  if (!elements || !stripe) {
-    return <><h2>loading...</h2></>
-  }
-  setCardElement(elements.getElement(CardElement))
+
+  useEffect(() => {
+    setCardElement(elements?.getElement(CardElement))
+  }, [elements])
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    const { error, paymentMethod } = await stripe.createPaymentMethod({
-      type: 'card',
-      card: cardElement,
-    })
-    if (!error) {
-      try {
-        const { id } = paymentMethod
-        const response = await axios.post('http://localhost:4000/payment', {
-          amount: 1000,
-          id,
-        })
-        if (response.data.succes) {
-          console.log('succesfull payment')
-          setSucces(true)
-        }
-      } catch (error) {
-        console.log('ERROR', error)
-      }
+
+    if (!elements || !stripe) {
+      return (
+        <div>
+          <h2>loading...</h2>
+        </div>
+      )
     } else {
-      console.log(error.message)
+      const { error, paymentMethod } = await stripe.createPaymentMethod({
+        type: 'card',
+        card: cardElement,
+      })
+      if (!error) {
+        try {
+          const { id } = paymentMethod
+          const response = await axios.post('http://localhost:4000/payment', {
+            amount: 1000,
+            id,
+          })
+          if (response.data.succes) {
+            console.log('successful payment')
+            setSucces(true)
+          }
+        } catch (error) {
+          console.log('ERROR', error)
+        }
+      } else {
+        console.log(error.message)
+      }
     }
   }
 
   return (
-    <>
+    <div className="w-screen h-screen bg-slate-500">
       {!succes ? (
         <form onSubmit={handleSubmit}>
           <fieldset className="FormGroup">
             <div className="FormRow">
               <CardElement />
+              <h2>hello</h2>
             </div>
           </fieldset>
           <button>Pay</button>
@@ -75,6 +84,6 @@ export default function PaymentForm() {
           <h2>You just bought a sweet spatula!</h2>
         </div>
       )}
-    </>
+    </div>
   )
 }
