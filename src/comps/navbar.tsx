@@ -1,13 +1,14 @@
 //icons
-import MediaQuery from 'react-responsive';
-import { useState } from 'react';
+import MediaQuery from 'react-responsive'
+import { Link } from 'react-router-dom'
+import { useState } from 'react'
 
 export default function Navbar() {
-  const [burgerMenu, setBurgerMenu] = useState<boolean>(false);
+  const [burgerMenu, setBurgerMenu] = useState<boolean>(false)
 
   const showNav = () => {
-    setBurgerMenu(!burgerMenu);
-  };
+    setBurgerMenu(!burgerMenu)
+  }
 
   return (
     <nav className="flex justify-between bg-yellow-200 text-black py-5 px-5">
@@ -45,17 +46,9 @@ export default function Navbar() {
       {/* hamburger */}
       {burgerMenu ? (
         // close button
-        <i
-          className="fixed right-[30px] fa fa-times text-2xl z-50 xl:hidden"
-          aria-hidden="true"
-          onClick={showNav}
-        ></i>
+        <i className="fixed right-[30px] fa fa-times text-2xl z-50 xl:hidden" aria-hidden="true" onClick={showNav}></i>
       ) : (
-        <i
-          className="fa fa-bars text-3xl  xl:hidden"
-          aria-hidden="true"
-          onClick={showNav}
-        ></i>
+        <i className="fa fa-bars text-3xl  xl:hidden" aria-hidden="true" onClick={showNav}></i>
       )}
 
       {/* mobile nav */}
@@ -64,43 +57,31 @@ export default function Navbar() {
           burgerMenu ? 'right-[0px]' : 'right-[-100vw]'
         } `}
       >
-        <a
-          href="#"
+        <Link
+          to="/"
+          onClick={() => setBurgerMenu(false)}
           className="text-2xl p-6 text-black px-24 py-5 pb-7 hover:bg-gray-300 rounded-xl hover:underline "
         >
           Home
-        </a>
-        <a
-          href="#"
+        </Link>
+        <Link
+          to="/home"
+          onClick={() => setBurgerMenu(false)}
           className="text-2xl p-6 text-black px-24 py-5 pb-7 hover:bg-gray-300 rounded-xl"
         >
           Shop
-        </a>
-        <a
-          href="#"
+        </Link>
+        <Link
+          to="/cart"
+          onClick={() => setBurgerMenu(false)}
           className="text-2xl p-6 text-black px-24 py-5 pb-7 hover:bg-gray-300 rounded-xl"
         >
           Cart
-        </a>
-        <a
-          href="#"
-          className="text-2xl p-6 text-black px-24 py-5 pb-7 hover:bg-gray-300 rounded-xl"
-        >
-          Basket
-        </a>
-        <a
-          href="#"
-          className="text-2xl p-6 text-black px-24 py-5 pb-7 hover:bg-gray-300 rounded-xl"
-        >
-          Heart
-        </a>
-        <a
-          href="#"
-          className="text-2xl p-6 text-black px-24 py-5 pb-7 hover:bg-gray-300 rounded-xl"
-        >
+        </Link>
+        <a href="#" className="text-2xl p-6 text-black px-24 py-5 pb-7 hover:bg-gray-300 rounded-xl">
           User
         </a>
       </nav>
     </nav>
-  );
+  )
 }
