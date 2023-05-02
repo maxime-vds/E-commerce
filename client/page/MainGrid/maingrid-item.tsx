@@ -1,3 +1,5 @@
+import React from "react"
+
 type MainGridItemProps = {
   image: string
   onClick: () => void

@@ -4,6 +4,7 @@ import { useEffect } from 'react'
 
 //types
 import { dataProps } from '../types/dataprops'
+import React from 'react'
 
 const UserCart = () => {
   const { fetchData, filteredData: data, setFilterType } = useFetch('http://localhost:3000/posts')
@@ -24,6 +25,8 @@ const UserCart = () => {
             <h2>total amount is : </h2>
           </div>
         ))}
+
+        <button onClick={() => }>Checkout</button>
     </div>
   )
 }

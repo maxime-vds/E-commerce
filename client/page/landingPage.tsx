@@ -1,3 +1,4 @@
+import React from "react";
 import Grid from "../comps/cardTest";
 import Delivery from "../comps/delivryInfo";
 import Footer from "../comps/footer";
@@ -11,8 +12,7 @@ export default function LandingPage() {
         <div className="bg-yellow-100 p-5 flex flex-col md:flex-row items-center">
           <div className="mr-2 p-2 md:mr-4 md:p-10">
             <p className="text-base">
-              {" "}
-              <i>Trending products 2023</i>{" "}
+              <i>Trending products 2023</i>
             </p>
             <h1 className="text-3xl font-bold">
               Make Your Interior More <br /> Minimalistic & Modern
@@ -31,7 +31,7 @@ export default function LandingPage() {
           </div>
           <div className="flex justify-center md:ml-auto">
             <img
-              src="./src/assets/test.jpg"
+              src="./assets/test.jpg"
               alt="My image"
               className="w-auto h-auto rounded-lg shadow-lg opacity-95"
             />

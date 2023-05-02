@@ -17,9 +17,7 @@ export default function useAddToCart() {
       const cartItems = JSON.parse(localCart)
       setCartItems(cartItems)
     }
-
     //if ID exists, add multiplier
-
     setCartItems((prevItem) => [...prevItem, { id, amount, image }])
   }
 

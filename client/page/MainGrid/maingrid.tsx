@@ -1,4 +1,5 @@
 //comps
+import React from 'react'
 import MainGridItem from './maingrid-item'
 
 //hooks
