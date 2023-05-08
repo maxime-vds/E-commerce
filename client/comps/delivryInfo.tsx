@@ -2,6 +2,7 @@ import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import CachedIcon from "@mui/icons-material/Cached";
 import SecurityIcon from "@mui/icons-material/Security";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
+import React from "react";
 
 export default function Delivery() {
   return (

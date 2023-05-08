@@ -1,10 +1,9 @@
+import React from 'react'
+
 export default function NewsLetters() {
   return (
     <>
-      <div
-        className="hero "
-        style={{ backgroundImage: `url("./src/assets/test.jpg")` }}
-      >
+      <div className="hero " style={{ backgroundImage: `url("./assets/test.jpg")` }}>
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content text-center text-neutral-content">
           <div className="p-10">
@@ -15,8 +14,8 @@ export default function NewsLetters() {
                     Sign up for our newsletter
                   </h2>
                   <p className="mx-auto mb-8 max-w-2xl font-light text-gray-500 md:mb-12 sm:text-xl dark:text-gray-400">
-                    Stay up to date with the roadmap progress, announcements and
-                    exclusive discounts feel free to sign up with your email.
+                    Stay up to date with the roadmap progress, announcements and exclusive discounts feel free to sign
+                    up with your email.
                   </p>
                   <form action="#">
                     <div className="items-center mx-auto mb-3 space-y-4 max-w-screen-sm sm:flex sm:space-y-0">
@@ -52,11 +51,8 @@ export default function NewsLetters() {
                       </div>
                     </div>
                     <div className="mx-auto max-w-screen-sm text-sm text-left text-gray-500 newsletter-form-footer dark:text-gray-300">
-                      We care about the protection of your data.{" "}
-                      <a
-                        href="#"
-                        className="font-medium text-primary dark:text-primary hover:underline"
-                      >
+                      We care about the protection of your data.{' '}
+                      <a href="#" className="font-medium text-primary dark:text-primary hover:underline">
                         Read our Privacy Policy
                       </a>
                       .
@@ -69,5 +65,5 @@ export default function NewsLetters() {
         </div>
       </div>
     </>
-  );
+  )
 }
