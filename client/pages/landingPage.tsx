@@ -1,4 +1,3 @@
-import React from "react";
 import Grid from "../comps/cardTest";
 import Delivery from "../comps/delivryInfo";
 import Footer from "../comps/footer";

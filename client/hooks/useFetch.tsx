@@ -6,7 +6,7 @@ import { dataProps } from '../types/dataprops'
 
 export const useFetch = (url: string) => {
   // get rid of these any's
-  const [data, setData] = useState<dataProps[]>()
+  const [data, setData] = useState<dataProps[]>([])
   const [filteredData, setFilteredData] = useState<dataProps[] | null>([])
   const [query, setQuery] = useState<string>('')
   const [IDquery, setIDquery] = useState<string[]>([])

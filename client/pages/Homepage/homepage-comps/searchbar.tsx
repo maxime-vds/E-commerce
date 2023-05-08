@@ -1,9 +1,9 @@
-import searchIcon from '/search.svg';
+import searchIcon from '/search.svg'
 
 type SearchBarProps = {
-  setQuery: React.Dispatch<React.SetStateAction<string>>;
-  setFilterType: React.Dispatch<React.SetStateAction<string>>;
-};
+  setQuery: React.Dispatch<React.SetStateAction<string>>
+  setFilterType: React.Dispatch<React.SetStateAction<string>>
+}
 
 function SearchBar({ setQuery, setFilterType }: SearchBarProps) {
   return (
@@ -17,7 +17,7 @@ function SearchBar({ setQuery, setFilterType }: SearchBarProps) {
       />
       <img src={searchIcon} />
     </div>
-  );
+  )
 }
 
-export default SearchBar;
+export default SearchBar

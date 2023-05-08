@@ -4,4 +4,4 @@ export type dataProps = {
   caption: string
   type: string
   image: string
-}
+} 

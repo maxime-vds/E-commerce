@@ -1,14 +1,10 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 
+import { dataProps } from '../../types/dataprops'
+
 type SingleItemProps = {
-  data: [
-    {
-      id: number
-      amount: number
-      image: string
-    }
-  ]
+  data: dataProps[] 
   setQuery: React.Dispatch<React.SetStateAction<string>>
   setSelectModal: React.Dispatch<React.SetStateAction<boolean>>
   AddToUserCart: (id: number, amount: number, image: string) => void

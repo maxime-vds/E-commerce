@@ -2,7 +2,6 @@
 import MediaQuery from 'react-responsive'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
-import React from "react";
 
 export default function Navbar() {
   const [burgerMenu, setBurgerMenu] = useState<boolean>(false)

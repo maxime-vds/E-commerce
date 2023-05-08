@@ -34,7 +34,12 @@ function Homepage() {
             <Route
               path="/:id"
               element={
-                <SingleItem setQuery={setQuery} data={data} setSelectModal={setSelectModal} AddToUserCart={AddToUserCart} />
+                <SingleItem
+                  setQuery={setQuery}
+                  data={data}
+                  setSelectModal={setSelectModal}
+                  AddToUserCart={AddToUserCart}
+                />
               }
             />
           </Routes>
