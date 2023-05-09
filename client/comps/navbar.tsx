@@ -22,7 +22,7 @@ export default function Navbar({ setQuery, setFilterType }: navbarProps) {
       <div className="flex justify-between px-72">
         <MediaQuery minWidth={1280}>
           <FilterButtons setQuery={setQuery} setFilterType={setFilterType} />
-          <a href="#" className="text-2xl font-chillax pr-20 pt-4">
+          <a href="#" className="text-2xl font-chillax pt-4">
             e-meuble
           </a>
           <div className="user-buttons flex justify-around w-52 pt-5">

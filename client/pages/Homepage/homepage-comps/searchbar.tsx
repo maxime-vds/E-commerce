@@ -12,7 +12,7 @@ function SearchBar({ setQuery, setFilterType }: SearchBarProps) {
         type="text"
         onChange={(e) => (setQuery(e.target.value), setFilterType('searchbar'))}
         placeholder="I'm looking for..."
-        className="border-solid border-[1px] border-slate-200 px-8 lg:pe-44 py-2 placeholder-black
+        className="font-montserrat border-solid border-[1px] border-slate-200 px-8 lg:pe-44 py-2 placeholder-black
                 focus:border-slate-900 focus:outline-none focus:px-12 focus:lg:px-[180px] focus:transition-all duration-300 ease-in-out"
       />
       <img src={searchIcon} />
