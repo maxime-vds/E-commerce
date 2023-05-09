@@ -1,6 +1,5 @@
-import React from "react";
 import Grid from "../comps/cardTest";
-import Delivery from "../comps/delivryInfo";
+import Delivery from "../comps/deliveryInfo";
 import Footer from "../comps/footer";
 
 import NewsLetters from "../comps/newsLetters";
@@ -24,7 +23,7 @@ export default function LandingPage() {
               praesentium eos eaque hic in numquam!
             </p>
             <div className="pt-4 flex justify-center md:justify-start">
-              <button className="border border-neutral-950 bg-red-500 p-2 m-2 rounded-lg border-red-800 hover:bg-red-400">
+              <button className="border border-neutral-950 bg-red-500 p-2 m-2 rounded-lg  hover:bg-red-400">
                 <p className="px-2 py-1 font-bold"> SHOP NOW</p>
               </button>
             </div>
