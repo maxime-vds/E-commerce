@@ -1,3 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'nimbus';
+  src: url('/font/nimbus-sans-l_regular.ttf');
+}
+
+@font-face {
+  font-family: 'nunito';
+  src: url('/font/Nunito-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: 'nunito-italic';
+  src: url('/font/Nunito-Italic-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: 'archivo-black';
+  src: url('/font/ArchivoBlack-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'montserrat';
+  src: url('/font/Montserrat-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: 'montserrat-italic';
+  src: url('/font/Montserrat-Italic-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: 'quicksand';
+  src: url('/font/Quicksand-VariableFont_wght.ttf');
+}

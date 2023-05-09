@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react'
 
 // types
-import { dataProps } from '../types/dataprops'
+import { dataProps } from '../types/fetch-props'
 
 export const useFetch = (url: string) => {
   // get rid of these any's

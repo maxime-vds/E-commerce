@@ -3,7 +3,7 @@ import { useFetch } from '../hooks/useFetch'
 import { useEffect } from 'react'
 
 //types
-import { dataProps } from '../types/dataprops'
+import { dataProps } from '../types/fetch-props'
 import { useNavigate } from 'react-router-dom'
 
 const UserCart = () => {

@@ -20,7 +20,7 @@ const FilterButtons = ({ setQuery, setFilterType }: FilterButtonsProps) => {
   }
 
   return (
-    <div className="flex overflow-x-scroll">
+    <div className="">
       {ButtonText &&
         ButtonText.map((text) => <Fbutton key={text} ButtonText={text} onClick={() => FilterValue(text)} />)}
     </div>

@@ -4,7 +4,7 @@ import MainGridItem from './maingrid-item'
 
 //hooks
 import { useNavigate } from 'react-router-dom'
-import { dataProps } from '../../types/dataprops'
+import { dataProps } from '../../types/fetch-props'
 
 type MainGridProps = {
   data: dataProps[] | null
@@ -19,9 +19,9 @@ const MainGrid = ({ data, setSelectModal }: MainGridProps) => {
     navigate(`/home/${id}`)
   }
   return (
-    <div className="grid relative gap-x-3 m-2 gap-y-5 grid-cols-2 md:grid-cols-3 xl:grid-cols-4 lg:gap-x-1 md:mx-[15rem] mx-1">
+    <div className="grid relative gap-y-5 grid-cols-2 md:grid-cols-3 xl:grid-cols-4 lg:gap-x-1 m-2">
       {data &&
-        data.map((item: any) => (
+        data.map((item: dataProps) => (
           <MainGridItem
             key={item.id}
             image={item.image}
