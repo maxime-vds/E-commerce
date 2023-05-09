@@ -1,7 +1,6 @@
 //comps
 import React from 'react'
 import MainGridItem from './maingrid-item'
-
 //hooks
 import { useNavigate } from 'react-router-dom'
 import { dataProps } from '../../types/fetch-props'
