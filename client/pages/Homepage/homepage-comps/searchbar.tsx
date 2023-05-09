@@ -1,4 +1,4 @@
-import searchIcon from '/search.svg'
+import searchIcon from '/icons/search.svg'
 
 type SearchBarProps = {
   setQuery: React.Dispatch<React.SetStateAction<string>>

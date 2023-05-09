@@ -36,3 +36,8 @@
   font-family: 'quicksand';
   src: url('/font/Quicksand-VariableFont_wght.ttf');
 }
+
+@font-face {
+  font-family: 'chillax';
+  src: url('/font/Chillax-Variable.ttf');
+}

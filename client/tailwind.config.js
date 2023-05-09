@@ -11,6 +11,7 @@ export default {
         montserrat: ['montserrat'],
         montserratItalic: ['montserrat-italic'],
         quicksand: ['quicksand'],
+        chillax: ['chillax'],
       },
     },
   },
