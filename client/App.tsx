@@ -11,6 +11,8 @@ import StripeContainer from './comps/stripe/stripe-container'
 //hooks
 import { useFetch } from './hooks/useFetch'
 
+import Login from './test/loginTest'
+
 function App() {
   const { fetchData, data, filteredData, query, setQuery, setFilterType } = useFetch('http://localhost:3000/posts')
   return (
@@ -34,6 +36,8 @@ function App() {
         <Route path="/cart" element={<UserCart />} />
         {/* <Route path="/checkout" element={<StripeContainer />} /> */}
         <Route path="/test" element={<GoogleLoginPage />} />
+        <Route path="/lol" element={<Login  />} />
+        
       </Routes>
     </BrowserRouter>
   )
