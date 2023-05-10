@@ -1,4 +1,10 @@
 //icons
+import ShoppingCart from '/icons/shopping-cart.svg'
+import User from '/icons/user.svg'
+import Heart from '/icons/heart.svg'
+import Sofa from '/icons/sofa.png'
+
+//react
 import MediaQuery from 'react-responsive'
 import { Link } from 'react-router-dom'
 import { useState, Dispatch, SetStateAction } from 'react'
@@ -19,45 +25,43 @@ export default function Navbar({ setQuery, setFilterType }: navbarProps) {
 
   return (
     <nav className="bg-gray-100">
-      <div className="flex justify-between px-72">
+      <div className="flex justify-center space-x-80">
         <MediaQuery minWidth={1280}>
+          <div className="flex justify-center pt-6 space-x-5">
+            {/* <img src={Sofa} className="h-14" alt="sofa.svg" /> */}
+            <Link to="/">
+              <h1 className="text-4xl font-milli hover:underline hover:decoration-1">e-meuble</h1>
+            </Link>
+          </div>
           <FilterButtons setQuery={setQuery} setFilterType={setFilterType} />
-          <a href="#" className="text-2xl font-chillax pt-4">
-            e-meuble
-          </a>
-          <div className="user-buttons flex justify-around w-52 pt-5">
-            <div>
-              <a href="" className="">
-                Panier
-              </a>
-            </div>
-            <div>
-              <a href="" className="">
-                coeur
-              </a>
-            </div>
-            <div>
-              <a href="" className="">
-                User
-              </a>
-            </div>
+
+          <div className="user-buttons flex justify-around w-52 pt-7">
+            <Link to="/">
+              <img src={ShoppingCart} className="w-8 cursor-pointer" alt="shopping-cart-icon.svg" />
+            </Link>
+            <Link to="/Liked">
+              <img src={Heart} className="w-8 cursor-pointer" alt="heart-icon.svg" />
+            </Link>
+            <Link to="/Dashboard">
+              <img src={User} className="w-8 cursor-pointer" alt="user-icon.svg" />
+            </Link>
           </div>
         </MediaQuery>
       </div>
 
       <div className="xl:hidden flex justify-between px-4 py-2">
-        <a href="#" className="text-2xl font-chillax">
+        <a href="#" className="text-2xl font-milli hover:underline hover:decoration-1">
           e-meuble
         </a>
 
         {burgerMenu ? (
           <i
-            className="fixed right-[30px] fa fa-times text-2xl z-50 xl:hidden"
+            className="fixed cursor-pointer right-[30px] fa fa-times text-2xl z-50 xl:hidden"
             aria-hidden="true"
             onClick={showNav}
           ></i>
         ) : (
-          <i className="fa fa-bars text-3xl  xl:hidden" aria-hidden="true" onClick={showNav}></i>
+          <i className="cursor-pointer fa fa-bars text-3xl  xl:hidden" aria-hidden="true" onClick={showNav}></i>
         )}
         <nav
           className={`h-[100vh] fixed top-[0px] flex flex-col items-center w-full pt-16 xl:hidden bg-white z-40 duration-700 ${
