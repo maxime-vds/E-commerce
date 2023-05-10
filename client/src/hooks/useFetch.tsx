@@ -5,7 +5,6 @@ import { useState, useEffect } from 'react'
 import { dataProps } from '../types/fetch-props'
 
 export const useFetch = (url: string) => {
-  // get rid of these any's
   const [data, setData] = useState<dataProps[]>([])
   const [filteredData, setFilteredData] = useState<dataProps[] | null>([])
   const [query, setQuery] = useState<string>('')
