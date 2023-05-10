@@ -38,13 +38,9 @@ function App() {
         /> 
         <Route path="/cart" element={<UserCart />} />
         {/* <Route path="/checkout" element={<StripeContainer />} /> */}
-<<<<<<< HEAD:client/App.tsx
-        <Route path="/test" element={<GoogleLoginPage />} />
+        {/* <Route path="/test" element={<GoogleLoginPage />} /> */}
         <Route path="/lol" element={<Login  />} />
         
-=======
-        {/* <Route path="/test" element={<GoogleLoginPage />} /> */}
->>>>>>> b222e0f5a7b0011c542184e14df2d8af425adfab:client/src/App.tsx
       </Routes>
     </BrowserRouter>
   )
