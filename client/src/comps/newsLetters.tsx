@@ -1,9 +1,7 @@
-import React from 'react'
-
 export default function NewsLetters() {
   return (
     <>
-      <div className="hero " style={{ backgroundImage: `url("./assets/test.jpg")` }}>
+      <div className="hero " style={{ backgroundImage: `url("/assets/test.jpg")` }}>
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content text-center text-neutral-content">
           <div className="p-10">
@@ -51,7 +49,7 @@ export default function NewsLetters() {
                       </div>
                     </div>
                     <div className="mx-auto max-w-screen-sm text-sm text-left text-gray-500 newsletter-form-footer dark:text-gray-300">
-                      We care about the protection of your data.{' '}
+                      We care about the protection of your data.
                       <a href="#" className="font-medium text-primary dark:text-primary hover:underline">
                         Read our Privacy Policy
                       </a>

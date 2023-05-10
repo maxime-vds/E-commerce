@@ -5,14 +5,17 @@ import Navbar from './comps/navbar'
 import LandingPage from './pages/landingPage'
 import UserCart from './pages/usercart'
 import Homepage from './pages/Homepage/homepage'
-import GoogleLoginPage from './comps/googleLogin'
-import StripeContainer from './comps/stripe/stripe-container'
+// import GoogleLoginPage from './comps/googleLogin'
+// import StripeContainer from './comps/stripe/stripe-container'
 
-//hooks
+// //hooks
 import { useFetch } from './hooks/useFetch'
 
 function App() {
   const { fetchData, data, filteredData, query, setQuery, setFilterType } = useFetch('http://localhost:3000/posts')
+
+
+
   return (
     <BrowserRouter>
       <Navbar setQuery={setQuery} setFilterType={setFilterType} />
@@ -30,10 +33,10 @@ function App() {
               setFilterType={setFilterType}
             />
           }
-        />
+        /> 
         <Route path="/cart" element={<UserCart />} />
         {/* <Route path="/checkout" element={<StripeContainer />} /> */}
-        <Route path="/test" element={<GoogleLoginPage />} />
+        {/* <Route path="/test" element={<GoogleLoginPage />} /> */}
       </Routes>
     </BrowserRouter>
   )
