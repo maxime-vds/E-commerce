@@ -1,12 +1,12 @@
 //comps
 import React from 'react'
 import MainGridItem from './maingrid-item'
-
 //hooks
 import { useNavigate } from 'react-router-dom'
+import { dataProps } from '../../types/fetch-props'
 
 type MainGridProps = {
-  data: [{}] | [] | null
+  data: dataProps[] | null
   setSelectModal: React.Dispatch<React.SetStateAction<boolean>>
 }
 
@@ -18,8 +18,17 @@ const MainGrid = ({ data, setSelectModal }: MainGridProps) => {
     navigate(`/home/${id}`)
   }
   return (
-    <div className="grid relative gap-x-3 m-2 gap-y-10 grid-cols-2">
-      {data && data.map((item: any) => <MainGridItem key={item.id} image={item.image} onClick={() => ClickItem(item.id)} />)}
+    <div className="grid relative gap-y-5 grid-cols-2 md:grid-cols-3 xl:grid-cols-4 lg:gap-x-1 m-2">
+      {data &&
+        data.map((item: dataProps) => (
+          <MainGridItem
+            key={item.id}
+            image={item.image}
+            caption={item.caption}
+            amount={item.amount}
+            onClick={() => ClickItem(item.id)}
+          />
+        ))}
     </div>
   )
 }

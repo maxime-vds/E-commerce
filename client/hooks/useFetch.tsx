@@ -2,11 +2,11 @@
 import { useState, useEffect } from 'react'
 
 // types
-import { dataProps } from '../types/dataprops'
+import { dataProps } from '../types/fetch-props'
 
 export const useFetch = (url: string) => {
   // get rid of these any's
-  const [data, setData] = useState<dataProps[]>()
+  const [data, setData] = useState<dataProps[]>([])
   const [filteredData, setFilteredData] = useState<dataProps[] | null>([])
   const [query, setQuery] = useState<string>('')
   const [IDquery, setIDquery] = useState<string[]>([])
