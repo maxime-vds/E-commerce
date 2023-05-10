@@ -28,7 +28,7 @@ export default function LandingPage() {
             </div>
           </div>
           <div className="flex justify-center md:ml-auto">
-            <img src="./assets/test.jpg" alt="My image" className="w-auto h-auto rounded-lg shadow-lg opacity-95" />
+            <img src="/assets/test.jpg" alt="My image" className="w-auto h-auto rounded-lg shadow-lg opacity-95" />
           </div>
         </div>
       </section>
