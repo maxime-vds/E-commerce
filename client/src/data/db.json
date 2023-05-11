@@ -5,7 +5,7 @@
       "price": 19.99,
       "description": "brown desk chair",
       "likes": 999,
-      "name": "Chaise",
+      "name": "Chairs",
       "imageURL": "/brown-desk-chair.jpeg"
     },
     {
@@ -13,7 +13,7 @@
       "price": 15.99,
       "description": "brown outside chair",
       "likes": 999,
-      "name": "Chaise",
+      "name": "Chairs",
       "imageURL": "/brown-outside-chair.jpeg"
     },
     {
@@ -21,7 +21,7 @@
       "price": 15.99,
       "description": "bubble chair",
       "likes": 9,
-      "name": "Chaise",
+      "name": "Chairs",
       "imageURL": "/bubble-chair.jpeg"
     },
     {
@@ -29,7 +29,7 @@
       "price": 12.99,
       "description": "green chair",
       "likes": 9,
-      "name": "Chaise",
+      "name": "Chairs",
       "imageURL": "/green-chair.jpeg"
     },
     {
@@ -37,7 +37,7 @@
       "price": 21.99,
       "description": "comfy chair",
       "likes": 9,
-      "name": "Chaise",
+      "name": "Chairs",
       "imageURL": "/comfy-chair.jpeg"
     },
     {
@@ -45,7 +45,7 @@
       "price": 115.99,
       "description": "basic bed",
       "likes": 999,
-      "name": "Lit",
+      "name": "Beds",
       "imageURL": "/basic-bed.jpeg"
     },
     {
@@ -53,7 +53,7 @@
       "price": 255.99,
       "description": "elegant wooden bed",
       "likes": 999,
-      "name": "Lit",
+      "name": "Beds",
       "imageURL": "/elegant-wooden-bed.jpeg"
     },
     {
@@ -61,7 +61,7 @@
       "price": 295.99,
       "description": "fancy bed",
       "likes": 999,
-      "name": "Lit",
+      "name": "Beds",
       "imageURL": "/fancy-bed.jpeg"
     },
     {
@@ -69,7 +69,7 @@
       "price": 155.99,
       "description": "yellow bed",
       "likes": 999,
-      "name": "Lit",
+      "name": "Beds",
       "imageURL": "/yellow-bed.jpeg"
     },
     {
@@ -77,7 +77,7 @@
       "price": 95.99,
       "description": "chaise long couch",
       "likes": 999,
-      "name": "Couch",
+      "name": "Sofas",
       "imageURL": "/chaise-long-couch.jpeg"
     },
     {
@@ -85,7 +85,7 @@
       "price": 120.99,
       "description": "beige couch",
       "likes": 999,
-      "name": "Couch",
+      "name": "Sofas",
       "imageURL": "/beige-couch.jpeg"
     },
     {
@@ -93,7 +93,7 @@
       "price": 105.99,
       "description": "grey couch",
       "likes": 999,
-      "name": "Couch",
+      "name": "Sofas",
       "imageURL": "/grey-couch.jpeg"
     },
     {
@@ -101,7 +101,7 @@
       "price": 121.99,
       "description": "red couch",
       "likes": 999,
-      "name": "Couch",
+      "name": "Sofas",
       "imageURL": "/red-couch.jpeg"
     },
     {
@@ -109,7 +109,7 @@
       "price": 95.99,
       "description": "wooden couch",
       "likes": 999,
-      "name": "Couch",
+      "name": "Sofas",
       "imageURL": "/wooden-couch.jpeg"
     }
   ]
