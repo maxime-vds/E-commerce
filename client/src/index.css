@@ -41,3 +41,48 @@
   font-family: 'chillax';
   src: url('/font/Chillax-Variable.ttf');
 }
+
+@font-face {
+  font-family: 'compagnon';
+  src: url('/font/Compagnon-Light.otf');
+}
+
+@font-face {
+  font-family: 'compagnon-italic';
+  src: url('/font/Compagnon-LightItalic.otf');
+}
+
+@font-face {
+  font-family: 'compagnon-med';
+  src: url('/font/Compagnon-Medium.otf');
+}
+
+@font-face {
+  font-family: 'format';
+  src: url('/font/Format_1452.otf');
+}
+
+@font-face {
+  font-family: 'lackline';
+  src: url('/font/Lack-Line-Regular.otf');
+}
+
+@font-face {
+  font-family: 'lackline-italic';
+  src: url('/font/Lack-Line-Italic.otf');
+}
+
+@font-face {
+  font-family: 'lackline-reg';
+  src: url('/font/Lack-Regular.otf');
+}
+
+@font-face {
+  font-family: 'milli';
+  src: url('/font/Millimetre-Light.otf');
+}
+
+@font-face {
+  font-family: 'milli-light';
+  src: url('/font/Millimetre-Regular.otf');
+}
