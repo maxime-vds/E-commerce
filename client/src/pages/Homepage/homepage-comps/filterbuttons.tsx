@@ -22,7 +22,6 @@ const FilterButtons = ({ setQuery, setFilterType }: FilterButtonsProps) => {
   return (
     <div className="flex border-solid border-[1px] border-slate-300">
       {/* either map out an object with the links and the text or don't map out at all */}
-
       {ButtonText &&
         ButtonText.map((text) => <Fbutton key={text} ButtonText={text} onClick={() => FilterValue(text)} />)}
     </div>
