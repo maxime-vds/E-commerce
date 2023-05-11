@@ -2,115 +2,115 @@
   "posts": [
     {
       "id": 1,
-      "amount": 19.99,
-      "caption": "brown desk chair",
+      "price": 19.99,
+      "description": "brown desk chair",
       "likes": 999,
-      "type": "Chaise",
-      "image": "/brown-desk-chair.jpeg"
+      "name": "Chaise",
+      "imageURL": "/brown-desk-chair.jpeg"
     },
     {
       "id": 2,
-      "amount": 15.99,
-      "caption": "brown outside chair",
+      "price": 15.99,
+      "description": "brown outside chair",
       "likes": 999,
-      "type": "Chaise",
-      "image": "/brown-outside-chair.jpeg"
+      "name": "Chaise",
+      "imageURL": "/brown-outside-chair.jpeg"
     },
     {
       "id": 3,
-      "amount": 15.99,
-      "caption": "bubble chair",
+      "price": 15.99,
+      "description": "bubble chair",
       "likes": 9,
-      "type": "Chaise",
-      "image": "/bubble-chair.jpeg"
+      "name": "Chaise",
+      "imageURL": "/bubble-chair.jpeg"
     },
     {
       "id": 4,
-      "amount": 12.99,
-      "caption": "green chair",
+      "price": 12.99,
+      "description": "green chair",
       "likes": 9,
-      "type": "Chaise",
-      "image": "/green-chair.jpeg"
+      "name": "Chaise",
+      "imageURL": "/green-chair.jpeg"
     },
     {
       "id": 5,
-      "amount": 21.99,
-      "caption": "comfy chair",
+      "price": 21.99,
+      "description": "comfy chair",
       "likes": 9,
-      "type": "Chaise",
-      "image": "/comfy-chair.jpeg"
+      "name": "Chaise",
+      "imageURL": "/comfy-chair.jpeg"
     },
     {
       "id": 6,
-      "amount": 115.99,
-      "caption": "basic bed",
+      "price": 115.99,
+      "description": "basic bed",
       "likes": 999,
-      "type": "Lit",
-      "image": "/basic-bed.jpeg"
+      "name": "Lit",
+      "imageURL": "/basic-bed.jpeg"
     },
     {
       "id": 7,
-      "amount": 255.99,
-      "caption": "elegant wooden bed",
+      "price": 255.99,
+      "description": "elegant wooden bed",
       "likes": 999,
-      "type": "Lit",
-      "image": "/elegant-wooden-bed.jpeg"
+      "name": "Lit",
+      "imageURL": "/elegant-wooden-bed.jpeg"
     },
     {
       "id": 8,
-      "amount": 295.99,
-      "caption": "fancy bed",
+      "price": 295.99,
+      "description": "fancy bed",
       "likes": 999,
-      "type": "Lit",
-      "image": "/fancy-bed.jpeg"
+      "name": "Lit",
+      "imageURL": "/fancy-bed.jpeg"
     },
     {
       "id": 9,
-      "amount": 155.99,
-      "caption": "yellow bed",
+      "price": 155.99,
+      "description": "yellow bed",
       "likes": 999,
-      "type": "Lit",
-      "image": "/yellow-bed.jpeg"
+      "name": "Lit",
+      "imageURL": "/yellow-bed.jpeg"
     },
     {
       "id": 10,
-      "amount": 95.99,
-      "caption": "chaise long couch",
+      "price": 95.99,
+      "description": "chaise long couch",
       "likes": 999,
-      "type": "Couch",
-      "image": "/chaise-long-couch.jpeg"
+      "name": "Couch",
+      "imageURL": "/chaise-long-couch.jpeg"
     },
     {
       "id": 11,
-      "amount": 120.99,
-      "caption": "beige couch",
+      "price": 120.99,
+      "description": "beige couch",
       "likes": 999,
-      "type": "Couch",
-      "image": "/beige-couch.jpeg"
+      "name": "Couch",
+      "imageURL": "/beige-couch.jpeg"
     },
     {
       "id": 12,
-      "amount": 105.99,
-      "caption": "grey couch",
+      "price": 105.99,
+      "description": "grey couch",
       "likes": 999,
-      "type": "Couch",
-      "image": "/grey-couch.jpeg"
+      "name": "Couch",
+      "imageURL": "/grey-couch.jpeg"
     },
     {
       "id": 13,
-      "amount": 121.99,
-      "caption": "red couch",
+      "price": 121.99,
+      "description": "red couch",
       "likes": 999,
-      "type": "Couch",
-      "image": "/red-couch.jpeg"
+      "name": "Couch",
+      "imageURL": "/red-couch.jpeg"
     },
     {
       "id": 14,
-      "amount": 95.99,
-      "caption": "wooden couch",
+      "price": 95.99,
+      "description": "wooden couch",
       "likes": 999,
-      "type": "Couch",
-      "image": "/wooden-couch.jpeg"
+      "name": "Couch",
+      "imageURL": "/wooden-couch.jpeg"
     }
   ]
 }

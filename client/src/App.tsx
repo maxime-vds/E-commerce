@@ -1,5 +1,6 @@
+import { endpoint } from './api/endpoint'
+//react
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-
 //components
 import Navbar from './comps/navbar'
 import LandingPage from './pages/landingPage'
@@ -7,15 +8,11 @@ import UserCart from './pages/usercart'
 import Homepage from './pages/Homepage/homepage'
 // import GoogleLoginPage from './comps/googleLogin'
 // import StripeContainer from './comps/stripe/stripe-container'
-
 // //hooks
 import { useFetch } from './hooks/useFetch'
 
 function App() {
-  const { fetchData, data, filteredData, query, setQuery, setFilterType } = useFetch('http://localhost:3000/posts')
-
-
-
+  const { fetchData, data, filteredData, query, setQuery, setFilterType } = useFetch(endpoint)
   return (
     <BrowserRouter>
       <Navbar setQuery={setQuery} setFilterType={setFilterType} />
