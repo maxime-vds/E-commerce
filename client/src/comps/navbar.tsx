@@ -2,7 +2,6 @@
 import ShoppingCart from '/icons/shopping-cart.svg'
 import User from '/icons/user.svg'
 import Heart from '/icons/heart.svg'
-import Sofa from '/icons/sofa.png'
 
 //react
 import MediaQuery from 'react-responsive'

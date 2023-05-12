@@ -1,3 +1,5 @@
+import { endpoint } from '../api/endpoint'
+
 //hooks
 import { useFetch } from '../hooks/useFetch'
 import { useEffect } from 'react'
@@ -7,7 +9,7 @@ import { dataProps } from '../types/fetch-props'
 import { useNavigate } from 'react-router-dom'
 
 const UserCart = () => {
-  const { fetchData, filteredData: data, setFilterType } = useFetch('http://localhost:3000/posts')
+  const { fetchData, filteredData: data, setFilterType } = useFetch(endpoint)
   const navigate = useNavigate()
 
   useEffect(() => {
@@ -21,8 +23,8 @@ const UserCart = () => {
       {data &&
         data.map((d: dataProps) => (
           <div className="singleItem" key={d.id}>
-            <h2>€{d.amount}</h2>
-            <img src={d.image}></img>
+            <h2>€{d.price}</h2>
+            <img src={d.imageURL}></img>
             <h2>total amount is : </h2>
           </div>
         ))}

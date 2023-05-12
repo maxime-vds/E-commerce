@@ -2,8 +2,6 @@ export default function Grid() {
   return (
     <>
       <div className="flex flex-wrap justify-center pb-3">
-        <h1 className="w-full text-center pb-5 bg-gray-400">SHOP</h1>
-        <h3 className="w-full text-center pb-5">items</h3>
         <div className="w-full border border-dark bg-gray-300 md:w-1/2 lg:w-1/4 p-2">
           <div className="card w-96 bg-base-100 shadow-xl">
             <figure>
