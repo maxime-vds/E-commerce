@@ -36,7 +36,7 @@ function App() {
         <Route path="/cart" element={<UserCart />} />
         {/* <Route path="/checkout" element={<StripeContainer />} /> */}
         {/* <Route path="/test" element={<GoogleLoginPage />} /> */}
-        <Route path="/lol" element={<Login  />} />
+        <Route path="/login" element={<Login  />} />
         
       </Routes>
     </BrowserRouter>

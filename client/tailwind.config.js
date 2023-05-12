@@ -25,5 +25,5 @@ export default {
       },
     },
   },
-  plugins: [import('daisyui')],
+  plugins: [require('daisyui')],
 }

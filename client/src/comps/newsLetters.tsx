@@ -4,7 +4,7 @@ export default function NewsLetters() {
     <>
       <div className="hero " style={{ backgroundImage: `url("/assets/test.jpg")` }}>
         <div className="hero-overlay bg-opacity-60"></div>
-        <div className="hero-content text-center text-neutral-content">
+        <div className="hero-content text-center text-neutral-content ">
           <div className="p-10">
             <section className="bg-slate-200">
               <div className="py-8 px-4 lg:py-16 lg:px-6">
