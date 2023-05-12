@@ -26,13 +26,13 @@ export const useFetch = (url: string) => {
     if (data) {
       if (filterType === 'searchbar') {
         const filteredDataOnCaption = data.filter((item: dataProps) =>
-          item.caption.toLowerCase().includes(query.toLowerCase())
+          item.description.toLowerCase().includes(query.toLowerCase())
         )
         setFilteredData(filteredDataOnCaption)
       }
       if (filterType === 'filterbuttons') {
         const filteredDataOnCategory = data.filter((item: dataProps) =>
-          item.type.toLowerCase().includes(query.toLowerCase())
+          item.name.toLowerCase().includes(query.toLowerCase())
         )
         setFilteredData(filteredDataOnCategory)
       }

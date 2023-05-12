@@ -2,10 +2,10 @@ import { Dispatch, SetStateAction } from 'react'
 
 export type dataProps = {
   id: number
-  amount: number
-  caption: string
-  type: string
-  image: string
+  price: number
+  description: string
+  name: string
+  imageURL: string
 }
 
 export type fetchProps = {

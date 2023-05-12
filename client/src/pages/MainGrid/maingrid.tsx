@@ -9,7 +9,6 @@ type MainGridProps = {
   data: dataProps[] | null
   setSelectModal: React.Dispatch<React.SetStateAction<boolean>>
 }
-
 const MainGrid = ({ data, setSelectModal }: MainGridProps) => {
   const navigate = useNavigate()
 
@@ -23,9 +22,9 @@ const MainGrid = ({ data, setSelectModal }: MainGridProps) => {
         data.map((item: dataProps) => (
           <MainGridItem
             key={item.id}
-            image={item.image}
-            caption={item.caption}
-            amount={item.amount}
+            image={item.imageURL}
+            caption={item.description}
+            amount={item.price}
             onClick={() => ClickItem(item.id)}
           />
         ))}
