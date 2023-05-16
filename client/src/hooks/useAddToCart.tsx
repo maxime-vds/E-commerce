@@ -29,7 +29,7 @@ export default function useAddToCart() {
     }
   }, [cartItems])
 
-  const BuyUserCart = (body: { id: string; amount: number }) => {
+  const BuyUserCart = (_body: { id: string; amount: number }) => {
     // grab&prepare body for fetch request
     // const body = {
     // id : cartItems.reduce((acc, item) => acc + item.amount, 0)),
