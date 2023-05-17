@@ -7,7 +7,7 @@ import LandingPage from './pages/LandingPage/landingPage'
 import UserCart from './pages/usercart'
 import Homepage from './pages/Homepage/homepage'
 // import GoogleLoginPage from './comps/googleLogin'
-// import StripeContainer from './comps/stripe/stripe-container'
+ import StripeContainer from './comps/stripe/stripe-container'
 // //hooks
 import { useFetch } from './hooks/useFetch'
 
@@ -34,7 +34,7 @@ function App() {
           }
         />
         <Route path="/cart" element={<UserCart />} />
-        {/* <Route path="/checkout" element={<StripeContainer />} /> */}
+        <Route path="/checkout" element={<StripeContainer />} />
         {/* <Route path="/test" element={<GoogleLoginPage />} /> */}
         <Route path="/login" element={<Login  />} />
         

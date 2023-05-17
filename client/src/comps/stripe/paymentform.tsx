@@ -68,22 +68,29 @@ export default function PaymentForm() {
   }
 
   return (
-    <div className="w-screen h-screen bg-slate-500">
-      {!succes ? (
-        <form onSubmit={handleSubmit}>
-          <fieldset className="FormGroup">
-            <div className="FormRow">
-              <CardElement />
-              <h2>hello</h2>
-            </div>
-          </fieldset>
-          <button>Pay</button>
-        </form>
-      ) : (
-        <div>
-          <h2>You just bought a sweet spatula!</h2>
+    <div className="w-screen h-screen bg-slate-500 flex items-center justify-center">
+  {!succes ? (
+    <form onSubmit={handleSubmit} className="max-w-lg bg-white p-8 rounded-lg shadow-lg">
+      <fieldset className="FormGroup">
+        <div className="FormRow mb-6 h-14 ">
+          <CardElement className="border rounded p-3 w-96" />
         </div>
-      )}
+        <h2 className="text-2xl font-bold mb-4">Hello</h2>
+        <div className="flex justify-end">
+          <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded">
+            Pay
+          </button>
+        </div>
+      </fieldset>
+    </form>
+  ) : (
+    <div className="max-w-lg bg-white p-8 rounded-lg shadow-lg">
+      <h2 className="text-2xl font-bold text-center">
+        You just bought a sweet spatula!
+      </h2>
     </div>
+  )}
+</div>
+
   )
 }

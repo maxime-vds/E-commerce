@@ -35,7 +35,7 @@ export default function Navbar({ setQuery, setFilterType }: navbarProps) {
           <FilterButtons setQuery={setQuery} setFilterType={setFilterType} />
 
           <div className="user-buttons flex justify-around w-52 pt-7">
-            <Link to="/">
+            <Link to="/cart">
               <img src={ShoppingCart} className="w-8 cursor-pointer" alt="shopping-cart-icon.svg" />
             </Link>
             <Link to="/Liked">

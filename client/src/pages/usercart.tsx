@@ -29,7 +29,7 @@ const UserCart = () => {
           </div>
         ))}
 
-      <button onClick={() => navigate('/checkout')}>CheckOut</button>
+      <button onClick={() => navigate('/checkout')} className='text-white border border-blue-500 bg-blue-500 hover:bg-blue-600 p-2 px-10 rounded-md'>CheckOut</button>
     </div>
   )
 }
