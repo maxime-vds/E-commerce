@@ -4,6 +4,10 @@
 ## e-commerce, furniture app 
 
 in progress
-https://e-commerce-eta-brown.vercel.app/
+
+
+<a href="https://e-commerce-eta-brown.vercel.app/"> Live ? click here </a>
+
+
 
 
