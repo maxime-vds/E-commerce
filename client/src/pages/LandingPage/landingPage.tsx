@@ -4,6 +4,8 @@ import Grid from '../../comps/cardTest'
 import Delivery from '../../comps/deliveryInfo'
 import Footer from '../../comps/footer'
 import NewsLetters from '../../comps/newsLetters'
+import { Link } from 'react-router-dom'
+import Homepage from '../Homepage/homepage'
 
 export default function LandingPage() {
   return (
@@ -18,9 +20,9 @@ export default function LandingPage() {
               your buns at the end of the day and we've got you covered!
             </p>
             <div className="pt-4 flex justify-center md:justify-start">
-              <button className="bg-slate-100 rounded-lg  hover:bg-black hover:text-white">
+            <Link to ="/Homepage"> <button className="bg-slate-100 rounded-lg  hover:bg-black hover:text-white">
                 <p className="p-2 text-center font-chillax font-bold">SHOP NOW</p>
-              </button>
+              </button> </Link> 
             </div>
           </div>
           <div className="flex justify-center">
